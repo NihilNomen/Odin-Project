@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <header>
+    <!-- This is the page name-->
+  <title>Multi Color Fader</title>
+  <style type="text/css">
+    div{
+        height:100px;
+        width:100px;
+        display:inline;
+    }
+    #red{
+        background-color: #FF0000;
+    }
+
+    #blue{
+        background-color: #0000FF;
+    }
+    #yellow{
+        background-color: #E2BE22;
+    }
+    #green{
+        background-color: #008800;
+    }
+  </style>
+</header>
+
+<body>
+  <!-- HTML and Javascript Goes in Here-->
+  <div id="red"></div>
+  <div id="blue"></div>
+  <div id="yelow"></div>
+  <div id="green"></div>
+  <!-- Always put javascript below your html when in body -->
+  <!-- This import jQuery -->
+  <script
+    src="https://code.jquery.com/jquery-2.2.4.min.js"
+    integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+    crossorigin="anonymous"></script>
+  <script>
+  $(document).ready(function() {
+   $('div').mouseenter(function() {
+       $(this).animate({
+           height: '+=10px'
+       });
+   });
+   $('div').mouseleave(function() {
+       $(this).animate({
+           height: '-=10px'
+       }); 
+   });
+   $('div').click(function() {
+       $(this).toggle(1000);
+   }); 
+  });
+  </script>
+</body>
+</html>
