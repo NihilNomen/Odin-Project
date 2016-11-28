@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<header>
+  <meta charset="utf-8">
+  <title>Etch-A-SketchPad</title>
+  <style type="text/css">
+    .square {
+        background-color: #737373;
+        float: left;
+        position: relative;
+        width: 30%;
+        padding-bottom: 30.66%;
+        margin: 1.66%; 
+    }
+    .square:hover{
+        background-color: black;
+    }
+    #container: hover .square{
+        background-color: black;
+    }
+  </style>
+</header>
+<body>
+  <!--<div> creates the squares-->
+  <div id="container">
+    <div class="square"></div>
+    <div class="square"></div>
+    <div class="square"></div>
+    <div class="square"></div>
+    <div class="square"></div>
+    <div class="square"></div>
+    <div class="square"></div>
+    <div class="square"></div>
+    <div class="square"></div>
+    <div class="square"></div>
+    <div class="square"></div>
+    <div class="square"></div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-2.2.4.min.js"   integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="   crossorigin="anonymous">
+  </script>
+
+  <script>
+    $(document).ready(function(){
+      $("div").hover(function(){
+        $(this).css("background-color", "black");
+          }, function(){
+          $(this).css("background-color", "white");
+    });
+  </script>
+</body>
+</html>
